@@ -1,0 +1,48 @@
+body {
+  background-color: #1c1c2b;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+h1, h2 {
+  color: #ffe600;
+  font-weight: 700;
+  text-shadow: 2px 2px #000;
+}
+
+.countdown {
+  font-size: 1.5rem;
+  color: #e62429;
+}
+
+iframe {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 315px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: #111;
+}
+
+.card-header {
+  background-color: #e62429;
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.highlight {
+  color: #e62429;
+  font-weight: bold;
+}
