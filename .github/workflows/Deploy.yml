@@ -11,26 +11,24 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node (requerido por Pages, aunque no uses Node.js)
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload GitHub Pages artifact
-        run: |
-          mkdir public
-          cp index.html style.css script.js public/
-          
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v2
